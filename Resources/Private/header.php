@@ -1,5 +1,7 @@
 <?php
 
+$currentPage = basename($_SERVER['PHP_SELF']);
+
 echo "<!DOCTYPE html>
 <head>
 
@@ -7,6 +9,12 @@ echo "<!DOCTYPE html>
     <meta charset='utf-8'>
     <link rel='stylesheet' href='style.css'>
     ";
+
+if ($currentPage === 'locations.php') {
+    echo "<link rel='stylesheet' type='text/css' href='Resources/Libraries/leaflet/leaflet.css'>
+";
+}
+
 
 if (isset($scriptList) && is_array($scriptList)) {
     foreach ($scriptList as $script) {
@@ -19,7 +27,7 @@ echo "
 </head>
 ";
 
-$currentPage = basename($_SERVER['PHP_SELF']);
+
 
 echo "<body>
     <main>

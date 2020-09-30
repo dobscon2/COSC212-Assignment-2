@@ -1,37 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Dunedin Car Rentals</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="Resources/Libraries/jquery-3.5.1.min.js"></script>
-    <script src="bookings.js"></script>
-</head>
-<body>
-    <main>
-        <header>
-            <h1>Dunedin Car Rentals</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="book.php">Make a booking</a></li>
-                    <li><a href="locations.php">Locations</a></li>
-                </ul>
-            </nav>
-        </header>
-
+<?php
+    $scriptList = array('Resources/Libraries/jquery-3.5.1.min.js', 'bookings.js');
+    include('Resources/Private/header.php');
+?>
         <section>
             <h2>Confirmed Bookings</h2>
             <table id="bookings"></table>
         </section>
 
-        <footer>
-            <ul>
-                <li><strong>© Dunedin Car Rentals</strong></li>
-                <li><a href="index.php">Logout</a></li>
-            </ul>
-        </footer>
-    </main>
-
-</body>
-</html>
+<?php
+    include('Resources/Private/footer.php');
+?>
