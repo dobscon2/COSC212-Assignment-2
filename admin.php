@@ -5,7 +5,7 @@
     <title>Dunedin Car Rentals</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="Resources/Libraries/jquery-3.5.1.min.js"></script>
-    <script src="book.js"></script>
+    <script src="bookings.js"></script>
 </head>
 <body>
     <main>
@@ -13,22 +13,22 @@
             <h1>Dunedin Car Rentals</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>Make a booking</li>
-                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="book.php">Make a booking</a></li>
+                    <li><a href="locations.php">Locations</a></li>
                 </ul>
             </nav>
         </header>
 
         <section>
-            <h2>Make a booking</h2>
-            <div id="createBooking"></div>
+            <h2>Confirmed Bookings</h2>
+            <table id="bookings"></table>
         </section>
 
         <footer>
             <ul>
                 <li><strong>© Dunedin Car Rentals</strong></li>
-                <li><a href="admin.html">Staff Login</a></li>
+                <li><a href="index.php">Logout</a></li>
             </ul>
         </footer>
     </main>

@@ -15,8 +15,8 @@
             <h1>Dunedin Car Rentals</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="book.html">Make a booking</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="book.php">Make a booking</a></li>
                     <li>Locations</li>
                 </ul>
             </nav>
@@ -32,7 +32,7 @@
         <footer>
             <ul>
                 <li><strong>© Dunedin Car Rentals</strong></li>
-                <li><a href="admin.html">Staff Login</a></li>
+                <li><a href="admin.php">Staff Login</a></li>
             </ul>
         </footer>
     </main>

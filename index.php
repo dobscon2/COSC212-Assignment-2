@@ -14,8 +14,8 @@
             <nav>
                 <ul>
                     <li>Home</li>
-                    <li><a href="book.html">Make a booking</a></li>
-                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="book.php">Make a booking</a></li>
+                    <li><a href="locations.php">Locations</a></li>
                 </ul>
             </nav>
         </header>
@@ -35,7 +35,7 @@
         <footer>
             <ul>
                 <li><strong>© Dunedin Car Rentals</strong></li>
-                <li><a href="admin.html">Staff Login</a></li>
+                <li><a href="admin.php">Staff Login</a></li>
             </ul>
         </footer>
     </main>
