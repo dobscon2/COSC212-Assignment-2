@@ -274,7 +274,7 @@ var book = (function() {
             error: function(data) {
                 $("#createBooking").append("<h3>Booking Failed</h3>");
                 $("#createBooking").append("<p>Sorry, we were unable to receive your booking. Please try again later</p>");
-            }
+            },
         });
 
         $("#createBooking").empty();
