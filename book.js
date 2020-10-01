@@ -256,14 +256,30 @@ var book = (function() {
 
     /* This function confirms the booking and sends the booking off making it final */
     function bookCar() {
-        var booking = {number: registration_number, name: name, pickup: pickupDate, dropoff: dropoffDate};
+        var booking = {number: registration_number, name: name, pickup: {date: pickupDate.getDate().toString(), month: pickupDate.getMonth().toString(), year: pickupDate.getFullYear().toString()}, dropoff: {date: dropoffDate.getDate().toString(), month: dropoffDate.getMonth().toString(), year: dropoffDate.getFullYear().toString()}};
         var output = JSON.stringify(booking);
-        window.sessionStorage.setItem("booking", output);
+
+        console.log(booking);
+        $.ajax( {
+            url: 'Resources/Private/sendBooking.php',
+            type: 'POST',
+            cache: false,
+            contentType: 'application/json; charset=utf-8',
+            data: output,
+            dataType: 'JSON',
+            success: function(data) {
+                $("#createBooking").append("<h3>Booking Successful</h3>");
+                $("#createBooking").append("<p>We have received your booking</p>");
+            },
+            error: function(data) {
+                $("#createBooking").append("<h3>Booking Failed</h3>");
+                $("#createBooking").append("<p>Sorry, we were unable to receive your booking. Please try again later</p>");
+            }
+        });
 
         $("#createBooking").empty();
 
-        $("#createBooking").append("<h3>Booking Successful</h3>");
-        $("#createBooking").append("<p>Thanks for booking with us</p>");
+
     }
 
     /* Setup function gets the data from vehicles.json ready for the webiste to use */
