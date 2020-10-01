@@ -1,5 +1,4 @@
 <?php
-    $scriptList = array('Resources/Libraries/jquery-3.5.1.min.js', 'bookings.js');
     include('Resources/Private/header.php');
 ?>
         <section>
@@ -10,8 +9,25 @@
                     $bookings = json_decode($json_file, true);
                     $bookings = $bookings['bookings']['booking'];
 
-                    print(sizeof($bookings));
+                    echo "<thead>
+<tr>
+<th>number</th>
+<th>name</th>
+<th>pickup</th>
+<th>dropoff</th>
+</tr>
+</thead>
+<tbody>";
+                    foreach ($bookings as $booking) {
+                        echo "<tr>";
+                        echo "<td>".$booking['number']."</td>";
+                        echo "<td>".$booking['name']."</td>";
+                        echo "<td>".$booking['pickup']['day']."/".$booking['pickup']['month']."/".$booking['pickup']['year']."</td>";
+                        echo "<td>".$booking['dropoff']['day']."/".$booking['dropoff']['month']."/".$booking['dropoff']['year']."</td>";
+                        echo "</tr>";
+                    }
                 ?>
+                </tbody>
             </table>
         </section>
 <?php
