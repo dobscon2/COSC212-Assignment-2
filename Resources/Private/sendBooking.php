@@ -8,7 +8,5 @@
     array_push($append_booking, $input_data);
     $output = json_encode($append_booking);
     file_put_contents('booking_test.json', $output);
-
-    return "success";
-
+    echo http_response_code(200);
     ?>

@@ -266,12 +266,12 @@ var book = (function() {
             cache: false,
             contentType: 'application/json; charset=utf-8',
             data: output,
-            dataType: 'JSON',
-            success: function(data) {
+            async: false,
+            success: function(response) {
                 $("#createBooking").append("<h3>Booking Successful</h3>");
                 $("#createBooking").append("<p>We have received your booking</p>");
             },
-            error: function(data) {
+            error: function(response) {
                 $("#createBooking").append("<h3>Booking Failed</h3>");
                 $("#createBooking").append("<p>Sorry, we were unable to receive your booking. Please try again later</p>");
             },
