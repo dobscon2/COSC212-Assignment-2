@@ -41,7 +41,7 @@
 <fieldset>
 <legend>Vehicle Details</legend>
 <label for='vehicleRegistration'>Registration:</label>
-<input type='text' id='vehicleRegistration' name='vehicleRegistration' value='". $vehicle['registration'] . "'>
+<input type='text' id='vehicleRegistration' name='vehicleRegistration' value='". $vehicle['registration'] . "' required>
 <label for='vehicleType'>Type:</label>
 <select id='vehicleType' name='vehicleType'>";
 if ($vehicle['vehicleType'] === "Small") {
@@ -68,9 +68,9 @@ if ($vehicle['vehicleType'] === "Luxury") {
 }
 echo "</select>
 <label for='vehicleDescription'>Description:</label>
-<input type='text' id='vehicleDescription' name='vehicleDescription' value='". $vehicle['description'] ."'>
+<input type='text' id='vehicleDescription' name='vehicleDescription' value='". $vehicle['description'] ."' required>
 <label for='vehiclePrice'>Price per day: $</label>
-<input type='number' id='vehiclePrice' name='vehiclePrice' value='". $vehicle['pricePerDay'] . "'>
+<input type='number' id='vehiclePrice' name='vehiclePrice' value='". $vehicle['pricePerDay'] . "' required>
 <input type='hidden' id='currentRego' name='currentRego' value='" . $_GET['vehicle'] . "'/>
 <input type='submit' formaction='deleteVehicle.php' value='Delete Vehicle'>
 <input type='submit' value='Save Vehicle'>
@@ -84,7 +84,7 @@ echo "</select>
 <fieldset>
 <legend>Vehicle Details</legend>
 <label for='vehicleRegistration'>Registration:</label>
-<input type='text' id='vehicleRegistration' name='vehicleRegistration'>
+<input type='text' id='vehicleRegistration' name='vehicleRegistration' required>
 <label for='vehicleType'>Type:</label>
 <select id='vehicleType' name='vehicleType'>
 <option value='Small'>Small</option>
@@ -93,9 +93,9 @@ echo "</select>
 <option value='Luxury'>Luxury</option>
 </select>
 <label for='vehicleDescription'>Description:</label>
-<input type='text' id='vehicleDescription' name='vehicleDescription'>
+<input type='text' id='vehicleDescription' name='vehicleDescription' required>
 <label for='vehiclePrice'>Price per day: $</label>
-<input type='number' id='vehiclePrice' name='vehiclePrice'>
+<input type='number' id='vehiclePrice' name='vehiclePrice' required>
 <input type='hidden' id='newVehicle' name='newVehicle' value='true'>
 <input type='submit' value='Save Vehicle'>
 </fieldset>

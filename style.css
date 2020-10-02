@@ -211,3 +211,10 @@ footer ul li a {
     padding-bottom: 10px;
     padding-top: 10px;
 }
+
+#vehicleDetails {
+    display: block;
+    overflow: visible;
+    width: 100px;
+    margin: auto;
+}

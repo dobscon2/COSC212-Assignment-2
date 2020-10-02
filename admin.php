@@ -49,6 +49,7 @@
                 ?>
                 </tbody>
             </table>
+            <a href="vehicles.php">Edit vehicles</a>
         </section>
 <?php
     include('Resources/Private/footer.php');
