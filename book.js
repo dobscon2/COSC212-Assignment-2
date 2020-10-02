@@ -256,7 +256,7 @@ var book = (function() {
 
     /* This function confirms the booking and sends the booking off making it final */
     function bookCar() {
-        var booking = {number: registration_number, name: name, pickup: {date: pickupDate.getDate().toString(), month: pickupDate.getMonth().toString(), year: pickupDate.getFullYear().toString()}, dropoff: {date: dropoffDate.getDate().toString(), month: dropoffDate.getMonth().toString(), year: dropoffDate.getFullYear().toString()}};
+        var booking = {number: registration_number, name: name, pickup: {day: pickupDate.getDate().toString(), month: pickupDate.getMonth().toString(), year: pickupDate.getFullYear().toString()}, dropoff: {day: dropoffDate.getDate().toString(), month: dropoffDate.getMonth().toString(), year: dropoffDate.getFullYear().toString()}};
         var output = JSON.stringify(booking);
 
         console.log(booking);

@@ -4,9 +4,8 @@
 
     $booking_file = file_get_contents("../bookings.json");
     $append_booking = json_decode($booking_file,true);
-    $append_booking = $append_booking['bookings']['booking'];
-    array_push($append_booking, $input_data);
+    $append_booking['bookings']['booking'][] = $input_data;
     $output = json_encode($append_booking);
-    file_put_contents('booking_test.json', $output);
+    file_put_contents('../bookings.json', $output);
     echo http_response_code(200);
     ?>
