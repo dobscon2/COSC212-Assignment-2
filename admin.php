@@ -6,7 +6,6 @@
         $bookings = $json_data;
 
         $index = (int)$_POST['index'];
-        print_r($bookings->bookings->booking);
 
         unset($bookings->bookings->booking[$index]);
 
