@@ -266,7 +266,6 @@ var book = (function() {
             cache: false,
             contentType: 'application/json; charset=utf-8',
             data: output,
-            async: false,
             success: function(response) {
                 $("#createBooking").append("<h3>Booking Successful</h3>");
                 $("#createBooking").append("<p>We have received your booking</p>");
